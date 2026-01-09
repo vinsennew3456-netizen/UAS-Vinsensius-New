@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Perpustakaan - Dashboard Akademik</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="UNPAM_logo1.png" alt="Logo Perpustakaan" />
+          <h1>Aplikasi Perpustakaan</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#" data-page="home">Beranda</a></li>
+            <li><a href="#" data-page="transaction">Transaksi</a></li>
+            <li><a href="#" data-page="profile">Profil</a></li>
+            <li><a href="#" data-page="login">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Halaman Beranda -->
+      <div id="home" class="page active">
+        <section>
+          <h1>Selamat Datang di Aplikasi Perpustakaan</h1>
+          <p>
+            Aplikasi ini dirancang untuk memfasilitasi pengelolaan transaksi
+            perpustakaan secara efisien dan profesional. Berikut adalah
+            langkah-langkah penggunaan aplikasi ini:
+          </p>
+          <ol>
+            <li>Login ke akun Anda menggunakan kredensial yang valid.</li>
+            <li>
+              Navigasi ke halaman Transaksi untuk menambah transaksi baru.
+            </li>
+            <li>
+              Isi formulir transaksi dengan informasi yang akurat, termasuk nama
+              transaksi, jumlah, dan kategori.
+            </li>
+            <li>
+              Simpan transaksi dan akses link "Daftar Transaksi" untuk melihat
+              semua transaksi yang telah tercatat.
+            </li>
+            <li>
+              Gunakan halaman Profil untuk memahami lebih lanjut tentang
+              aplikasi ini.
+            </li>
+          </ol>
+        </section>
+      </div>
+
+      <!-- Halaman Transaksi -->
+      <div id="transaction" class="page">
+        <section>
+          <h2>Form Transaksi</h2>
+          <form id="transactionForm">
+            <div class="form-group">
+              <label for="namaTransaksi">Nama Transaksi</label>
+              <input type="text" id="namaTransaksi" required />
+              <div class="error" id="errorNama"></div>
+            </div>
+            <div class="form-group">
+              <label for="jumlah">Jumlah</label>
+              <input type="number" id="jumlah" required />
+              <div class="error" id="errorJumlah"></div>
+            </div>
+            <div class="form-group">
+              <label for="kategori">Kategori</label>
+              <select id="kategori" required>
+                <option value="">Pilih Kategori</option>
+                <option value="Peminjaman">Peminjaman</option>
+                <option value="Pengembalian">Pengembalian</option>
+                <option value="Denda">Denda</option>
+              </select>
+              <div class="error" id="errorKategori"></div>
+            </div>
+            <button type="submit">Simpan</button>
+          </form>
+          <p><a href="#" data-page="transaction-list">Daftar Transaksi</a></p>
+        </section>
+      </div>
+
+      <!-- Halaman Daftar Transaksi -->
+      <div id="transaction-list" class="page">
+        <section>
+          <h2>Daftar Transaksi</h2>
+          <table id="transactionTable">
+            <thead>
+              <tr>
+                <th>Nama Transaksi</th>
+                <th>Jumlah</th>
+                <th>Kategori</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data akan dimuat dari localStorage -->
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <!-- Halaman Profil -->
+      <div id="profile" class="page">
+        <section>
+          <h1>Profil Aplikasi Perpustakaan</h1>
+          <p>
+            Aplikasi Perpustakaan adalah platform digital yang dirancang untuk
+            mendukung kegiatan perpustakaan di lingkungan akademik. Aplikasi ini
+            memungkinkan pengguna untuk mengelola transaksi perpustakaan dengan
+            mudah dan efisien.
+          </p>
+          <h2>Tujuan Aplikasi</h2>
+          <p>
+            Tujuan utama dari aplikasi ini adalah untuk menyederhanakan proses
+            administrasi perpustakaan, meningkatkan akurasi pencatatan
+            transaksi, dan memberikan pengalaman pengguna yang profesional serta
+            user-friendly.
+          </p>
+          <h2>Manfaat Aplikasi</h2>
+          <ul>
+            <li>
+              Mempermudah pencatatan dan pelacakan transaksi perpustakaan.
+            </li>
+            <li>Mengurangi kesalahan manusia dalam pengelolaan data.</li>
+            <li>
+              Menyediakan antarmuka yang intuitif dan responsif untuk berbagai
+              perangkat.
+            </li>
+            <li>
+              Mendukung lingkungan akademik dengan desain yang clean dan
+              profesional.
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Halaman Login -->
+      <div id="login" class="page">
+        <section>
+          <h2>Login</h2>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" required />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; build by vinsen</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```
